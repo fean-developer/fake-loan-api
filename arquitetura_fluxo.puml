@@ -1,0 +1,48 @@
+@startuml
+' Arquitetura e fluxo do projeto Fake Loan API
+
+
+class UserController
+class AccountController
+class LoanController
+class LoanService
+class AccountService
+class UserService
+class LoanRepository
+class AccountRepository
+class UserRepository
+class Account
+class Loan
+class User
+
+UserController --> UserService
+UserService --> UserRepository
+UserController --> UserRepository
+
+AccountController --> AccountService
+AccountService --> AccountRepository
+AccountController --> AccountRepository
+
+LoanController --> LoanService
+LoanService --> LoanRepository
+LoanService --> AccountRepository
+LoanService --> Account
+LoanService --> Loan
+
+LoanRepository --> Loan
+AccountRepository --> Account
+UserRepository --> User
+
+' Comentários:
+' UserController: Recebe requisições de usuário
+' AccountController: Recebe requisições de conta
+' LoanController: Recebe requisições de empréstimo
+' LoanService: Lógica de negócio de empréstimos
+' AccountService: Lógica de negócio de contas
+' UserService: Lógica de negócio de usuários
+' LoanRepository: Persistência de empréstimos
+' AccountRepository: Persistência de contas
+' UserRepository: Persistência de usuários
+' Account, Loan, User: Entidades de domínio
+
+@enduml

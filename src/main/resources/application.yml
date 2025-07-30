@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: fake-loan-api
+
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://admin:Saad0125@localhost:27017/fake-loan-db?authSource=admin}
+      database: ${MONGODB_DATABASE:fake-loan-db}

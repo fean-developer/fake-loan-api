@@ -1,0 +1,23 @@
+@startuml
+' Diagrama de Atividades - Aprovação de Empréstimo
+
+start
+:Usuário solicita aprovação de empréstimo;
+:Controller recebe requisição;
+:Controller chama LoanService.approveLoan();
+:LoanService busca conta pelo número;
+if (Conta encontrada?) then (Sim)
+  :Verifica saldo da conta;
+  if (Saldo suficiente?) then (Sim)
+    :Atualiza saldo da conta;
+    :Define status do empréstimo como "APPROVED";
+    :Salva alterações na conta;
+    :Retorna empréstimo aprovado;
+  else (Não)
+    :Lança exceção de saldo insuficiente;
+  endif
+else (Não)
+  :Lança exceção de conta não encontrada;
+endif
+stop
+@enduml
