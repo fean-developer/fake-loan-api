@@ -60,4 +60,4 @@ API de simulação e gerenciamento de empréstimos, contas e usuários, desenvol
 
 ---
 
-Desenvolvido por Hero-offers — 2025
+Desenvolvido por fean-developer + gihub copilot — 2025
