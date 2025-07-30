@@ -59,5 +59,4 @@ API de simulação e gerenciamento de empréstimos, contas e usuários, desenvol
 - Para testar os endpoints, utilize ferramentas como Postman ou Insomnia.
 
 ---
-
 Desenvolvido por fean-developer + gihub copilot — 2025
