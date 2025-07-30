@@ -2,6 +2,7 @@ package poc_abc.fake_loan_api.services;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
@@ -24,6 +25,12 @@ public class LoanService {
         if (accountOpt.isEmpty()) {
             throw new IllegalArgumentException("Account not found with id: " + accountId);
         }
+
+        List<Loan> existingLoans = loanRepository.findByAccountId(accountId);
+        if (existingLoans.stream().anyMatch(loan -> loan.getStatus().equals("PENDING"))) {
+            throw new IllegalArgumentException("There is already a pending loan for this account.");
+        }
+
         Loan loan = Loan.builder()
                 .amount(amount)
                 .installments(installments)
@@ -37,7 +44,6 @@ public class LoanService {
     
     public Loan approveLoan(Loan loan) {
 
-        loan.setStatus("APPROVED");
         
         Optional<Account> accountOpt = accountRepository.findByAccountNumber(loan.getAccount().getAccountNumber());
         if (accountOpt.isEmpty()) {
@@ -52,13 +58,23 @@ public class LoanService {
         // Aprovar o empréstimo e atualizar o saldo da conta
         account.setBalance(account.getBalance().subtract(loan.getAmount()));
         accountRepository.save(account);
-        
-        return loan; // Retornar o empréstimo aprovado
+
+
+        Loan approvedLoan = loanRepository.findById(loan.getId())
+                .orElseThrow(() -> new IllegalArgumentException("Loan not found with id: " + loan.getId()));
+        approvedLoan.setAccount(account); // Atualizar a conta no empréstimo aprovado
+        approvedLoan.setStatus("APPROVED");
+        loanRepository.save(approvedLoan); // Salvar o empréstimo aprovado novamente
+
+        return approvedLoan; // Retornar o empréstimo aprovado
     }
 
     public Loan rejectLoan(Loan loan) {
-        loan.setStatus("REJECTED");
-        return loanRepository.save(loan); // Salvar o empréstimo rejeitado
+  
+        Loan rejectedLoan = loanRepository.findById(loan.getId())
+                .orElseThrow(() -> new IllegalArgumentException("Loan not found with id: " + loan.getId()));
+        rejectedLoan.setStatus("REJECTED");
+        return loanRepository.save(rejectedLoan); // Salvar o empréstimo rejeitado
 
     }
 
