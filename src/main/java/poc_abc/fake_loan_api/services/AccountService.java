@@ -30,7 +30,7 @@ public class AccountService {
         Account account = Account.builder()
                 .user(userOpt.get())
                 .accountNumber(generateAccountNumber()) // Gerar número de conta único
-                .balance(BigDecimal.ZERO) // Inicializar saldo como zero
+                .balance(BigDecimal.valueOf(5000)) // Inicializar saldo como 5000
                 .accountType("SAVINGS") // Tipo de conta padrão
                 .build();
 

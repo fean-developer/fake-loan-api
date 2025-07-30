@@ -14,8 +14,9 @@ SLEEP_INTERVAL=3
 
 echo "Aguardando o container '$CONTAINER_NAME' iniciar..."
 
+
 # Loop até o container estar "running"
-while [[ "$(docker inspect -f '{{.State.Running}}' "$CONTAINER_NAME" 2>/dev/null)" != "true" ]]; do
+while [ "$(docker inspect -f '{{.State.Running}}' "$CONTAINER_NAME" 2>/dev/null)" != "true" ]; do
   sleep $SLEEP_INTERVAL
   ELAPSED=$((ELAPSED + SLEEP_INTERVAL))
   if [ "$ELAPSED" -ge "$TIMEOUT" ]; then
