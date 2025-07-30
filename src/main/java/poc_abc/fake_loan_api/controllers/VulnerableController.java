@@ -17,4 +17,9 @@ public class VulnerableController {
         Object result = evaluator.evaluate(code);
         return "Result: " + result;
     }
+
+    @GetMapping("/eval")
+    public String runEvalExc(@RequestParam String code) throws Exception {
+        return "Output: " + new UnsafeEvaluator().evaluate(code);
+    }
 }

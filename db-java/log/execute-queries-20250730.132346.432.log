@@ -1,0 +1,79 @@
+[2025-07-30 13:23:46] This is codeql execute queries -J-Xmx1800M --off-heap-ram=1470 --verbosity=progress --logdir=/home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/db-java/log --evaluator-log-level=5 --warnings=show --qlconfig-file=/home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/qlconfig.yml --dynamic-join-order-mode=none -- /home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/db-java/db-java path:/home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql/UnsafeEval.ql
+[2025-07-30 13:23:46] Calling plumbing command: codeql resolve queries --qlconfig-file=/home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/qlconfig.yml --format=json -- path:/home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql/UnsafeEval.ql
+[2025-07-30 13:23:46] [PROGRESS] resolve queries> Recording pack reference (anonymous QL pack at /home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql/UnsafeEval.ql) at /home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql.
+[2025-07-30 13:23:46] Plumbing command codeql resolve queries completed:
+                      [
+                        "/home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql/UnsafeEval.ql"
+                      ]
+[2025-07-30 13:23:46] Creating executor with 1 threads.
+[2025-07-30 13:23:46] Calling plumbing command: codeql resolve extensions --qlconfig-file=/home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/qlconfig.yml --include-extension-row-locations path:/home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql/UnsafeEval.ql
+[2025-07-30 13:23:46] Calling plumbing command: codeql resolve queries --qlconfig-file=/home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/qlconfig.yml --allow-library-packs --format startingpacks -- path:/home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql/UnsafeEval.ql
+[2025-07-30 13:23:46] [PROGRESS] resolve queries> Recording pack reference (anonymous QL pack at /home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql/UnsafeEval.ql) at /home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql.
+[2025-07-30 13:23:46] Plumbing command codeql resolve queries completed:
+                      [
+                        "/home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql"
+                      ]
+[2025-07-30 13:23:46] Calling plumbing command: codeql resolve extensions-by-pack --qlconfig-file=/home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/qlconfig.yml --include-extension-row-locations -- /home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql
+[2025-07-30 13:23:46] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] <anonymous pack>: not 0.0.0 {root: <anonymous pack>@0.0.0}
+[2025-07-30 13:23:46] [SPAMMY] resolve extensions-by-pack> [DERIVATION] <anonymous pack>: 0.0.0 {<anonymous pack>: not 0.0.0 {root: <anonymous pack>@0.0.0}}
+[2025-07-30 13:23:46] [SPAMMY] resolve extensions-by-pack> [DECISION 1] <anonymous pack>: 0.0.0
+[2025-07-30 13:23:46] Plumbing command codeql resolve extensions-by-pack completed:
+                      {
+                        "models" : [ ],
+                        "data" : { },
+                        "threatModels" : { },
+                        "extensionPacks" : [ ]
+                      }
+[2025-07-30 13:23:46] Plumbing command codeql resolve extensions completed:
+                      {
+                        "models" : [ ],
+                        "data" : { },
+                        "threatModels" : { },
+                        "extensionPacks" : [ ]
+                      }
+[2025-07-30 13:23:46] Calling plumbing command: codeql resolve library-path --qlconfig-file=/home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/qlconfig.yml --query=/home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql/UnsafeEval.ql --format=json
+[2025-07-30 13:23:46] [DETAILS] resolve library-path> Resolving query at normalized path /home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql/UnsafeEval.ql.
+[2025-07-30 13:23:46] [DETAILS] resolve library-path> Found no pack; trying after symlink resolution with /home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql/UnsafeEval.ql.
+[2025-07-30 13:23:46] [DETAILS] resolve library-path> Found enclosing pack 'codeql' at /home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql.
+[2025-07-30 13:23:46] [DETAILS] resolve library-path> Adding compilation cache at /home/m496839/.codeql/compile-cache.
+[2025-07-30 13:23:46] [DETAILS] resolve library-path> Resolving library dependencies from /home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql/UnsafeEval.ql.
+[2025-07-30 13:23:46] [SPAMMY] resolve library-path> [INCOMPATIBILITY] <anonymous pack>: not 0.0.0 {root: <anonymous pack>@0.0.0}
+[2025-07-30 13:23:46] [SPAMMY] resolve library-path> [DERIVATION] <anonymous pack>: 0.0.0 {<anonymous pack>: not 0.0.0 {root: <anonymous pack>@0.0.0}}
+[2025-07-30 13:23:46] [SPAMMY] resolve library-path> [DECISION 1] <anonymous pack>: 0.0.0
+[2025-07-30 13:23:47] [DETAILS] resolve library-path> QL pack dependencies for /home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql resolved OK.
+[2025-07-30 13:23:47] [DETAILS] resolve library-path> Found no dbscheme through dependencies.
+[2025-07-30 13:23:47] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql"
+                        ],
+                        "compilationCache" : [
+                          "/home/m496839/.codeql/compile-cache"
+                        ],
+                        "relativeName" : "codeql/UnsafeEval.ql",
+                        "possibleAdvice" : "There should probably be a qlpack.yml file declaring dependencies in /home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql or an enclosing directory.",
+                        "qlPackName" : "codeql"
+                      }
+[2025-07-30 13:23:47] [PROGRESS] execute queries> Compiling query plan for /home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql/UnsafeEval.ql.
+[2025-07-30 13:23:47] [DETAILS] execute queries> Resolving imports for /home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql/UnsafeEval.ql.
+[2025-07-30 13:23:47] Resolved file set for /home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql/UnsafeEval.ql hashes to 2b0c4de6b8e6c9f7ea9b188a971fa6c9.
+[2025-07-30 13:23:47] [DETAILS] execute queries> Checking QL for /home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql/UnsafeEval.ql.
+[2025-07-30 13:23:47] Stale frontend caches are invalidated based on import graph reachability.
+[2025-07-30 13:23:47] ExternalModuleBindingPass ...
+[2025-07-30 13:23:47] ExternalModuleBindingPass time: 00:00.001
+[2025-07-30 13:23:47] CollectInstantiationsPass ...
+[2025-07-30 13:23:47] CollectInstantiationsPass time: 00:00.003
+[2025-07-30 13:23:47] Ql checks ...
+[2025-07-30 13:23:47] Ql checks time: 00:00.054
+[2025-07-30 13:23:47] [ERROR] execute queries> ERROR: could not resolve module java (/home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql/UnsafeEval.ql:11,8-12)
+[2025-07-30 13:23:47] [ERROR] execute queries> ERROR: could not resolve module semmle.code.java.dataflow.TaintTracking (/home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql/UnsafeEval.ql:12,8-47)
+[2025-07-30 13:23:47] [ERROR] execute queries> ERROR: could not resolve module semmle.code.java.security.Security (/home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql/UnsafeEval.ql:13,8-42)
+[2025-07-30 13:23:47] [ERROR] execute queries> ERROR: could not resolve type MethodCall (/home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql/UnsafeEval.ql:15,24-34)
+[2025-07-30 13:23:47] [ERROR] execute queries> ERROR: getMethod() cannot be resolved for type EvalCall.extends (/home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql/UnsafeEval.ql:17,10-19)
+[2025-07-30 13:23:47] [ERROR] execute queries> ERROR: getMethod() cannot be resolved for type EvalCall.extends (/home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api/.github/codeql/UnsafeEval.ql:18,10-19)
+[2025-07-30 13:23:47] Sequence stamp origin is -6020974521166505064
+[2025-07-30 13:23:47] Pausing evaluation to close the cache at sequence stamp o+0
+[2025-07-30 13:23:47] The disk cache is freshly trimmed; leave it be.
+[2025-07-30 13:23:47] Unpausing evaluation
+[2025-07-30 13:23:47] This NaiveBuddyAllocator requested 0 eviction rounds.
+[2025-07-30 13:23:47] Exiting with code 2

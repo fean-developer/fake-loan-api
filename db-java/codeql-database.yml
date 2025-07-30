@@ -1,13 +1,13 @@
 ---
 sourceLocationPrefix: /home/m496839/workspace/projects/Hero-offers/usecase-bco-abc/poc-java-copilot/fake-loan-api
-baselineLinesOfCode: 353
+baselineLinesOfCode: 356
 unicodeNewlines: false
 columnKind: utf16
 primaryLanguage: java
 creationMetadata:
-  sha: f1f2945a42fb4cdc5a7105f5b0a4b89a838b4426
+  sha: 2b217e3f1e3761c5cf3441629e571d18b05ec9b0
   cliVersion: 2.22.1
-  creationTime: 2025-07-30T15:57:55.909265125Z
+  creationTime: 2025-07-30T16:14:29.143022299Z
 overlayBaseDatabase: false
 overlayDatabase: false
 finalised: true
