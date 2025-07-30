@@ -44,6 +44,10 @@ API de simulação e gerenciamento de empréstimos, contas e usuários, desenvol
 4. **Acesso:**
    - A API estará disponível em `http://localhost:8080`
 
+5. **Fluxo do projeto**
+
+![Diagrama de Atividades - Aprovação de Empréstimo](atividade_aprovacao_emprestimo.png)
+
 ## Estrutura do Projeto
 - `model/` — Entidades do domínio
 - `repository/` — Interfaces de acesso a dados
