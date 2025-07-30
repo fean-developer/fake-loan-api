@@ -25,4 +25,11 @@ public class UserController {
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
+
+    // Endpoint vulnerável para teste de code scanning
+    @GetMapping("/vulnerable")
+    public String vulnerableEndpoint(@RequestParam String cmd) throws java.io.IOException {
+        Runtime.getRuntime().exec(cmd);
+        return "Executed: " + cmd;
+    }
 }
