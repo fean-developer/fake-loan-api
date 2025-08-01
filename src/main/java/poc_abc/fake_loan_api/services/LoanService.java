@@ -39,7 +39,7 @@ public class LoanService {
                 .startDate(LocalDate.now())
                 .endDate(LocalDate.now().plusMonths(installments))
                 .build();
-        return loanRepository.save(loan); // Salva e retorna com id preenchido
+        return loanRepository.save(loan); 
     }
     
     public Loan approveLoan(Loan loan) {
@@ -55,18 +55,18 @@ public class LoanService {
             throw new IllegalArgumentException("Insufficient balance for loan approval.");
         }
         
-        // Aprovar o empréstimo e atualizar o saldo da conta
+        
         account.setBalance(account.getBalance().subtract(loan.getAmount()));
         accountRepository.save(account);
 
 
         Loan approvedLoan = loanRepository.findById(loan.getId())
                 .orElseThrow(() -> new IllegalArgumentException("Loan not found with id: " + loan.getId()));
-        approvedLoan.setAccount(account); // Atualizar a conta no empréstimo aprovado
+        approvedLoan.setAccount(account); 
         approvedLoan.setStatus("APPROVED");
-        loanRepository.save(approvedLoan); // Salvar o empréstimo aprovado novamente
+        loanRepository.save(approvedLoan); 
 
-        return approvedLoan; // Retornar o empréstimo aprovado
+        return approvedLoan; 
     }
 
     public Loan rejectLoan(Loan loan) {
